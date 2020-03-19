@@ -153,5 +153,16 @@ for (const square of canvasSquares) {
     square.addEventListener('click', squaresChangeColor);
 }
 
+const resetIconPaletteQuery = document.querySelector(".reset-button")
+
+const squaresResetColor = function () {
+    // const resetEvent = event.target.classList.replace(event.target.classList[1], 'color-5');
+    for (let squareR of canvasSquares) {
+        squareR.classList.replace(squareR.classList[1], 'color-5');
+    }
+}
+
+resetIconPaletteQuery.addEventListener('click', squaresResetColor);
+
 
 
